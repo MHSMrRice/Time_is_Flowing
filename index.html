@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Time is Flowing: Report</title>
+        <meta name="description" content="Fine_is_flowing">
+        <meta name="author" content="Corey Rice">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Time is Flowing</h1>
+        <div style="display:flex; flex-wrap:wrap;">
+            <div id="pie">
+                <iframe width="687.5" height="425.1041666666667" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubchart?oid=148260731&amp;format=interactive"></iframe>
+            </div>
+            <div id="waterfall" class="noShow">
+                <p>Waterfall Chart: time represented throughout the day</p> 
+                <iframe width="687.5" height="678.6041666666666" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubchart?oid=1133521027&amp;format=interactive"></iframe>
+                <button onclick="showWaterfall()">unHide</button>
+            </div>
+            <div id="table" class="noShow">
+                <p>Data Tables: More complete info (but hard to read)</p> 
+                <iframe width="687.5" height="auto" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubchart?oid=148260731&amp;format=interactive"></iframe>
+                <button onclick="showTable()">unHide</button>
+            </div>
+        </div>
+        <button id="hideall" class="hide" onclick="hideAll()">Hide All but Pie Chart</button>
+    </body>
+    <script>
+    function showWaterfall() {
+        document.getElementById("waterfall").class = "show";
+    }
+    function showTable() {
+        document.getElementById("table").class = "show";
+    }
+    function hideAll() {
+        document.getElementById("waterfall").style.visibility = "noShow";
+        document.getElementById("table").style.visibility = "noShow";
+    }
+    </script>
+</html>
