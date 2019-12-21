@@ -1,3 +1,4 @@
+/* for the two hide-ables */
 .show p, button{
     visibility:hidden;
 }
@@ -11,10 +12,11 @@
 .noShow iframe{
     visibility:hidden;
 }
+/* for the hideall button */
 .hide{
     visibility:hidden;
 }
-.show{
+.showing{
     visibility:visible;
 }
 
