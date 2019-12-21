@@ -8,6 +8,7 @@ button{
     margin:auto;
 }
 /* for the two hide-ables */
+/* showing off the graph & table */
 .show p, .show button{
     visibility:hidden;
 }
@@ -15,6 +16,10 @@ button{
     visibility:visible;
 }
 
+/* not showing the graph & table */
+.noShow{
+    width:100px;
+}
 .noShow p, .noShow button{
     visibility:visible;
     text-align:center;
