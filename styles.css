@@ -1,6 +1,7 @@
 #waterfall, #table{
     display:flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 button{
     width:85px;
