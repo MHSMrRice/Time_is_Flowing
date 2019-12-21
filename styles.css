@@ -11,3 +11,7 @@
 .noShow iframe{
     visibility:hidden;
 }
+
+div{
+    border-style: dotted;
+}
