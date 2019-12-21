@@ -1,3 +1,7 @@
+#waterfall, #table{
+    display:flex;
+    flex-direction: column;
+}
 /* for the two hide-ables */
 .show p, .show button{
     visibility:hidden;
@@ -12,9 +16,6 @@
     visibility:visible;
     text-align:center;
     padding:25%;
-}
-div button{
-    float:center;
 }
 .noShow iframe{
     visibility:hidden;
