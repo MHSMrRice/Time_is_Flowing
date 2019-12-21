@@ -10,6 +10,11 @@
 
 .noShow p, .noShow button{
     visibility:visible;
+    text-align:center;
+    padding:25%;
+}
+div button{
+    float:center;
 }
 .noShow iframe{
     visibility:hidden;
