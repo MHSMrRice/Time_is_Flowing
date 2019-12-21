@@ -1,5 +1,5 @@
 /* for the two hide-ables */
-.show p, button{
+.show p, .show button{
     visibility:hidden;
 }
 .show iframe{
@@ -7,7 +7,7 @@
     height:800;
 }
 
-.noShow p, button{
+.noShow p, .noShow button{
     visibility:visible;
 }
 .noShow iframe{
