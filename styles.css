@@ -4,6 +4,7 @@
 }
 .show iframe{
     visibility:visible;
+    height:800;
 }
 
 .noShow p, button{
@@ -11,6 +12,7 @@
 }
 .noShow iframe{
     visibility:hidden;
+    height:0;
 }
 /* for the hideall button */
 .hide{
