@@ -2,25 +2,27 @@
     display:flex;
     flex-direction: column;
 }
+button{
+    width:85px;
+    margin:auto;
+}
 /* for the two hide-ables */
 .show p, .show button{
     visibility:hidden;
 }
 .show iframe{
     visibility:visible;
-    height:800;
-    width:687.5;
 }
 
 .noShow p, .noShow button{
     visibility:visible;
     text-align:center;
-    padding:25%;
+    padding:0 20px;
 }
 .noShow iframe{
     visibility:hidden;
     height:0;
-    width:100;
+    width:0;
 }
 /* for the hideall button */
 .hide{
