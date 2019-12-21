@@ -1,15 +1,21 @@
-.show p{
+.show p, button{
     visibility:hidden;
 }
 .show iframe{
     visibility:visible;
 }
 
-.noShow p{
+.noShow p, button{
     visibility:visible;
 }
 .noShow iframe{
     visibility:hidden;
+}
+.hide{
+    visibility:hidden;
+}
+.show{
+    visibility:visible;
 }
 
 div{
