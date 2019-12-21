@@ -19,6 +19,7 @@ button{
 /* not showing the graph & table */
 .noShow{
     width:100px;
+    height:fit-content;
 }
 .noShow p, .noShow button{
     visibility:visible;
