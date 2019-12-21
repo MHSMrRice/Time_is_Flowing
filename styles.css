@@ -5,6 +5,7 @@
 .show iframe{
     visibility:visible;
     height:800;
+    width:687.5;
 }
 
 .noShow p, .noShow button{
@@ -13,6 +14,7 @@
 .noShow iframe{
     visibility:hidden;
     height:0;
+    width:100;
 }
 /* for the hideall button */
 .hide{
