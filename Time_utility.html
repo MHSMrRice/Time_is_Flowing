@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Time is Flowing: Report</title>
+        <meta name="description" content="Fine_is_flowing">
+        <meta name="author" content="Corey Rice">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            window.onload = todayHasData();
+        </script>
+        <style>
+        #waterfall, #table{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        button{
+            width:85px;
+            margin:auto;
+        }
+        /* for the two hide-ables */
+        /* showing off the graph & table */
+        .show p, .show button{
+            visibility:hidden;
+        }
+        .show iframe{
+            visibility:visible;
+        }
+
+        /* not showing the graph & table */
+        .noShow{
+            width:250px;
+            height:fit-content;
+        }
+        .noShow p, .noShow button{
+            visibility:visible;
+            text-align:center;
+            padding:0 20px;
+        }
+        .noShow iframe{
+            visibility:hidden;
+            height:0;
+            width:0;
+        }
+        /* for the hideall button */
+        .hide{
+            visibility:hidden;
+        }
+        .showing{
+            visibility:visible;
+        }
+        </style>
+    </head>
+    <body>
+        <div style="display:flex; flex-wrap:wrap;">
+            <h1>Time is Flowing</h1>
+            <button id="hideall" class="hide" onclick="hideAll()">Hide stuff</button>
+        </div>
+        <div style="display:flex; flex-wrap:wrap;">
+            <div id="pie">
+
+
+                <!-- Place the "embed" code for your pie chart here -->
+                <iframe id="piechart" width="687.5" height="425.1041666666667" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubchart?oid=148260731&amp;format=interactive"></iframe>
+
+
+            </div>
+            <div id="waterfall" class="noShow">
+                <p>Waterfall Chart: time represented throughout the day</p> 
+                
+
+
+                <!-- Place the "embed" code for your waterfall chart here -->
+                <iframe width="687.5" height="678.6041666666666" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubchart?oid=1133521027&amp;format=interactive"></iframe>
+                
+                
+
+                <button onclick="showWaterfall()">unHide</button>
+            </div>
+            <div id="table" class="noShow">
+                <p>Data Tables: More complete info (but hard to read)</p> 
+                
+
+                <!-- Place the "embed" code for your data table here -->
+                <iframe width="687.5" height="678.6041666666666" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTU_SBMGXeI4VXxc0xl0AZXzcH6PzzKwVAIrQhCwUuFy4ksMt8vvPklmcAApeFF0au8Qih4X8klz0F/pubhtml?gid=544852676&amp;single=true&amp;widget=true&amp;headers=false" ></iframe>
+                
+                
+                
+                <button onclick="showTable()">unHide</button>
+            </div>
+        </div>
+        <button id="hideall" class="hide" onclick="hideAll()">Hide stuff</button>
+        <script>
+            function showWaterfall() {
+                document.getElementById("waterfall").classList.add("show");
+                document.getElementById("waterfall").classList.remove("noShow");
+                document.getElementById("hideall").classList.add("showing");
+                document.getElementById("hideall").classList.remove("hide");
+            }
+            function showTable() {
+                document.getElementById("table").classList.add("show");
+                document.getElementById("table").classList.remove("noShow");
+                document.getElementById("hideall").classList.add("showing");
+                document.getElementById("hideall").classList.remove("hide");
+            }
+            function hideAll() {
+                document.getElementById("table").classList.add("noShow");
+                document.getElementById("waterfall").classList.add("noShow");
+                document.getElementById("table").classList.remove("show");
+                document.getElementById("waterfall").classList.remove("show");
+                document.getElementById("hideall").classList.add("hide");
+                document.getElementById("hideall").classList.remove("showing");
+            }
+
+            function todayHasData(){
+                if(!$("#piechart").length) {
+                    // iframe doesn't exist
+                    document.getElementById("pie").innerHTML = "No data exists for today...yet.";
+                }
+            }
+       </script>
+    </body>
+</html>
