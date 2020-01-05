@@ -18,10 +18,3 @@ function hideAll() {
     document.getElementById("hideall").classList.add("hide");
     document.getElementById("hideall").classList.remove("showing");
 }
-
-function todayHasData(){
-    if(!$("#piechart").length) {
-        // iframe doesn't exist
-        document.getElementById("pie").innerHTML = "No data exists for today...yet.";
-    }
-}
